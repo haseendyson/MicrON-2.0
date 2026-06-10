@@ -355,7 +355,7 @@ def upload_config():
     logger.info("Creating form")
     form_placeholder = st.empty()
     example_config_path = Path(
-        st.secrets.get("EXAMPLE_CONFIG_FILE", "configs/example_social.toml")
+        st.secrets.get("EXAMPLE_CONFIG_FILE", "configs/south_asian_healthcare_futures.toml")
     )
     example_config_text = example_config_path.read_text(encoding="utf-8")
 

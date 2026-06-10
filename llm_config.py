@@ -359,6 +359,7 @@ class LLMConfig:
                 "Write a full story for one person or family in a South Asian community in the UK. "
                 "Use an informal, neighbourhood voice with family, neighbours, community support, food, or local trust woven in. "
                 "Do not be formal — write as if you were sharing a real story from the neighbourhood.\n\n"
+                "Use the participant's answers to build a future scenario. If the summary includes goals, cultural factors, or stakeholders, make sure they are reflected clearly in the story.\n\n"
                 "Use this structure exactly:\n"
                 "- Scenario Title: a clear, distinct title different from the other scenarios.\n"
                 "- Setting: where and when this future story happens.\n"
@@ -368,6 +369,9 @@ class LLMConfig:
                 "- Outcome: how the situation improves and what value it creates.\n"
                 "- Narrative: a short, story-like paragraph or two that brings the future to life.\n"
                 "- Values: a short list of the human values that matter in this story.\n"
+                "- Cultural Factors: a short list of cultural, family, language, or migration considerations.\n"
+                "- Goals: a short list of the goals or hopes driving this story.\n"
+                "- Stakeholders: the people or groups involved in this story.\n"
                 "- Themes: a short list of themes, separated by •.\n\n"
                 "Give each title a distinct heading and avoid repeating the exact same title phrase across scenarios.\n"
                 "Keep the title separate from the narrative and avoid repeating it as the first sentence.\n\n"
@@ -377,7 +381,7 @@ class LLMConfig:
                 "\n"
                 "Create a scenario based on these responses.\n\n"
                 "Your output should be a JSON file with a single entry called \"output_scenario\" "
-                "and that entry should itself be a JSON object with keys \"Scenario Title\", \"Setting\", \"Actor\", \"Challenge\", \"Journey\", \"Outcome\", \"Narrative\", \"Values\", and \"Themes\".\n"
+                "and that entry should itself be a JSON object with keys \"Scenario Title\", \"Setting\", \"Actor\", \"Challenge\", \"Journey\", \"Outcome\", \"Narrative\", \"Values\", \"Cultural Factors\", \"Goals\", \"Stakeholders\", and \"Themes\".\n"
                 "Do not return only a title or themes; always provide a title, story narrative, and themes.\n"
             )
         )

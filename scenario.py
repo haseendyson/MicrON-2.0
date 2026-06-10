@@ -58,10 +58,19 @@ def _scenario_to_text(scenario_data) -> str:
         journey_text = ai_block.get("Journey") or ai_block.get("journey")
         outcome_text = ai_block.get("Outcome") or ai_block.get("outcome")
         values_text = ai_block.get("Values") or ai_block.get("values")
+        cultural_text = ai_block.get("Cultural Factors") or ai_block.get("cultural_factors") or ai_block.get("culturalFactors")
+        goals_text = ai_block.get("Goals") or ai_block.get("goals")
+        stakeholders_text = ai_block.get("Stakeholders") or ai_block.get("stakeholders")
         themes = ai_block.get("Themes") or ai_block.get("themes")
         if narrative:
             if values_text:
                 parts.append(f"*Values: {values_text}*")
+            if cultural_text:
+                parts.append(f"*Cultural Factors: {cultural_text}*")
+            if goals_text:
+                parts.append(f"*Goals: {goals_text}*")
+            if stakeholders_text:
+                parts.append(f"*Stakeholders: {stakeholders_text}*")
             if themes:
                 parts.append(f"*Themes: {themes}*")
         else:
